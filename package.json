@@ -1,0 +1,23 @@
+{
+  "name": "alexa_project",
+  "version": "1.0.0",
+  "description": "project for amazon alexa app",
+  "main": "index.js",
+  "scripts": {
+    "test": "run_test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitchrobinson/alexa_project.git"
+  },
+  "keywords": [
+    "alexa",
+    "amazon"
+  ],
+  "author": "Mitch Robinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitchrobinson/alexa_project/issues"
+  },
+  "homepage": "https://github.com/mitchrobinson/alexa_project#readme"
+}

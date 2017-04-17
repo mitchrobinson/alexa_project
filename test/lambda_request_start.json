@@ -1,0 +1,29 @@
+{
+  "session": {
+    "sessionId": "SessionId.200bbd6d-e9e2-421c-88a2-1e725a94b8e0",
+    "application": {
+      "applicationId": "amzn1.ask.skill.33384b6e-9357-4e16-8a13-3a901c694401"
+    },
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.AFZZZXLSAZHHJVKFPOVPFZ3PEOEEQAO7J6KXIXPP42PCXKR5LK4SJXWKDA7KNPGY63DM22G7Q3K6IOD2FRXHOEIN576O4W5WXF77VRQSZRBBQSXQZEBXUN37JF7SO6QJTGGWAIYKP4AJ6RQONGJP6NJNNWT5L36LSIQB3CPADVZDGSDIT77YRUYFWCYNFKDFQPCPKNFAA3MDNYA"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.603ff305-af6b-4c15-8db1-3de0cb7dbd77",
+    "locale": "en-US",
+    "timestamp": "2017-01-18T03:19:58Z",
+    "intent": {
+      "name": "GetSong",
+      "slots": {
+        "Song": {
+          "name": "Song",
+          "value": "song"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

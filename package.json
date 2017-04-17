@@ -4,7 +4,7 @@
   "description": "project for amazon alexa app",
   "main": "index.js",
   "scripts": {
-    "test": "run_test"
+    "test": "test"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/mitchrobinson/alexa_project/issues"
   },
-  "homepage": "https://github.com/mitchrobinson/alexa_project#readme"
+  "homepage": "https://github.com/mitchrobinson/alexa_project#readme",
+  "dependencies": {
+    "alexa-sdk": "^1.0.8"
+  },
+  "devDependencies": {
+    "aws-sdk-mock": "^1.6.1"
+  }
 }

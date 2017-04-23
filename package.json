@@ -21,9 +21,13 @@
   },
   "homepage": "https://github.com/mitchrobinson/alexa_project#readme",
   "dependencies": {
-    "alexa-sdk": "^1.0.8"
+    "alexa-sdk": "^1.0.8",
+    "cson": "^4.1.0"
   },
   "devDependencies": {
-    "aws-sdk-mock": "^1.6.1"
+    "aws-lambda-mock-context": "^3.0.1",
+    "aws-sdk-mock": "^1.6.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   }
 }

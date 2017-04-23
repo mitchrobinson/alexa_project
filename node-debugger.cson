@@ -1,0 +1,11 @@
+"*":
+  welcome:
+    showOnStartup: false
+  "node-debugger":
+    nodePath: "/usr/local/bin/node"
+    scriptMain: "C:/Users/mitchellrobinson/Alexa_project/test/index"
+  tabs:
+    usePreviewTabs: true
+  core: {}
+  editor:
+    invisibles: {}

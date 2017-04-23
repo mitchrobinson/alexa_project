@@ -1,12 +1,14 @@
-const conext = require("aws-lambda-mock-context");
+const context = require("aws-lambda-mock-context");
 var expect = require("chai").expect;
 var index = require("../src/index");
 
 const ctx = context();
 
+
+
 describe("Testing the HelloIntent", function() {
 
-  var speechResponse = null;
+  var speechResponse = "lol";
   var speechError = null;
 
   before(function(done) {
@@ -30,24 +32,28 @@ describe("Testing the HelloIntent", function() {
         "intent": {
           "name": "HelloIntent",
           "slots": {
-            "HelloGreeting": {
-              "name": "HelloGreeting",
-              "value": "Mitch"
+            "Word": {
+              "name": "Word",
+              "value": "hello"
             }
           }
         }
       },
       "version": "1.0"
     }, ctx);
-    ctx.Promise
-        .then(response => { speechResponse = response; console.log(speechResponse); done(); })
-        .catch(error => { speechError = error; done(); })
+
+    done();
   });
 
-
   describe("Is the response structurally correct", function() {
-    if("should not have errored", function() {
-      expect(speechError).to.be.null;
+      it("should not have errored", function() {
+        expect(speechError).to.be.null;
+      });
+  });
+
+  describe("The response should be a string", function() {
+    it("should be a string", function() {
+      expect(speechResponse).to.be.a('string');
     });
   });
 

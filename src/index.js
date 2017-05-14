@@ -1,47 +1,20 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
 var Alexa = require("alexa-sdk");
+exports.handler = function(event, context, callback) {
+    var alexa = Alexa.handler(event, context);
+    alexa.registerHandlers(handlers);
+    alexa.appId = "amzn1.ask.skill.33384b6e-9357-4e16-8a13-3a901c694401";
+    alexa.execute();
+};
+
 var handlers = {
-    "AboutIntent": function () {
-        var self = this;
-        var speechOutput = "This skill was written by little b";
-        self.emit(":tellWithcard", speechOutput, "Mitch's Skill", speechOutput);
-        console.log("I am processing the AboutIntent");
-        // tell with card just means say it with a record of what was said in Alexa app
+    'LaunchRequest': function () {
+        this.emit(':tell','Welcome to the Human Assistant.  I am here to help. ... Maybe.');
     },
-    "HelloIntent": function () {
-        var self = this;
-        // constructor implementation to now refernce the self
-        var intentRequest = self.event.request;
-        // obtain the reuest.  Request is the a subsidiary JSON object in the json file (request, session, version are the 3)
-        var value = intentRequest.intent.slots.Word.value;
-        var speechOutput = "";
-        if (value.toLowerCase == "hello") {
-            speechOutput = "The word in Spanish is hola";
-        }
-        else {
-            speechOutput = "I did not understand the word";
-        }
-        self.emit(":tellWithcard", speechOutput, "Mitch's Skill", speechOutput);
-        console.log("I am processing the HelloIntent");
+    'HelloWorldIntent': function () {
+        this.emit(':tell','What is good?')
     },
-    "WeatherIntent": function() {
-      var self = this;
-      var intentRequest = self.event.request;
-      var weatherLocal = self.intent.slots.Location.value;
-      var weatherTime = self.intent.slots.Time.value;
-      speechOutput = get_weather_response(weatherLocal, weatherTime);
-      self.emit(":tellWithcard", speechOutput, "Mitch's Skill", speechOutput);
+    'Unhandled': function() {
+        this.emit(':ask', 'You silly, I did not understand that');
     }
 };
-var Handler = (function () {
-    function Handler(event, context, callback) {
-        var alexa = Alexa.handler(event, context);
-        alexa.appId = "my_app_ID";
-        alexa.registerHandlers(handlers);
-        alexa.execute();
-        console.log("I just created a handler");
-    }
-    return Handler;
-}());
-exports.Handler = Handler;
